@@ -1,12 +1,27 @@
-import * as React from 'react'
-import Layout from '../components/layout'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+// import SEO from "../components/seo"
 
-const IndexPage = () => {
+
+export default ({ data }) => {
+  console.log(data);
   return (
-    <Layout pageTitle="Home Page">
-      <p>Welcome to My Site.</p>
+    <Layout>
+      <h4>Posts</h4>
+        <div>
+          {/* <p>{node.title}</p> */}
+        </div>
     </Layout>
   )
 }
 
-export default IndexPage
+
+export const pageQuery = graphql`
+query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+}`

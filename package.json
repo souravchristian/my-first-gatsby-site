@@ -18,6 +18,8 @@
     "bootstrap": "^4.6.0",
     "gatsby": "^3.8.1",
     "gatsby-plugin-gatsby-cloud": "^2.9.0",
+    "gatsby-plugin-sharp": "^3.9.0",
+    "gatsby-source-filesystem": "^3.9.0",
     "gatsby-source-wordpress": "^5.9.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",

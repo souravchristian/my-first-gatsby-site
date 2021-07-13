@@ -9,6 +9,7 @@ import {
 } from './layout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
+  // alert(pageTitle);
   return (
     <main className={container}>
       <title>{pageTitle}</title>
@@ -22,6 +23,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
             </Link>
           </li>
         </ul>
