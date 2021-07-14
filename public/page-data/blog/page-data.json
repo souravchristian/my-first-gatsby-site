@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"allFile":{"nodes":[]}},"pageContext":{}},"staticQueryHashes":["3159585216"]}
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"wpgraphql":{"posts":{"nodes":[{"slug":"home","title":"Home","content":"\n<p>Welcome</p>\n"},{"slug":"testing","title":"Testing","content":null},{"slug":"hello-world","title":"Sourav Christian!","content":"\n<p>Susccess</p>\n"}]}}},"pageContext":{}},"staticQueryHashes":["3159585216"]}

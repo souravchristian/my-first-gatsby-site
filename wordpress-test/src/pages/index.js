@@ -28,25 +28,6 @@ return (
 }
 
 
-
-
-
-// export const query = graphql`
-// wpgraphql {
-// query {
-//     posts {
-//       nodes {
-//         slug
-//         title(format: RENDERED)
-//       }
-//     }
-//   }
-// }
-// `
-
-
-
-
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />

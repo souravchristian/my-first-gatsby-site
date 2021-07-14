@@ -7,13 +7,13 @@ const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
       <ul>
-      {
+      {/* {
         data.allFile.nodes.map(node => (
           <li key={node.name}>
             {node.name}
           </li>
         ))
-      }
+      } */}
       </ul>
     </Layout>
   )
@@ -21,9 +21,13 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile {
-      nodes {
-        name
+    wpgraphql {
+      posts {
+        nodes {
+          slug
+          title(format: RENDERED)
+          content(format: RENDERED)
+        }
       }
     }
   }

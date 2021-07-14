@@ -8,7 +8,7 @@ export default ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      <h4>Posts</h4>
+      <h4>This is Home Page</h4>
         <div>
           {/* <p>{node.title}</p> */}
         </div>
@@ -17,11 +17,16 @@ export default ({ data }) => {
 }
 
 
-export const pageQuery = graphql`
-query {
-    site {
-      siteMetadata {
-        title
+export const query = graphql`
+  query {
+    wpgraphql {
+      posts {
+        nodes {
+          slug
+          title(format: RENDERED)
+          content(format: RENDERED)
+        }
       }
     }
-}`
+  }
+`
