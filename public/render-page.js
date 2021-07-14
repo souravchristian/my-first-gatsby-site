@@ -15,7 +15,6 @@
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")),
-  "component---src-pages-blog-js": preferDefault(__webpack_require__(/*! ./src/pages/blog.js */ "./src/pages/blog.js")),
   "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))
   }
 
@@ -5284,6 +5283,29 @@ exports.onRenderBody = onRenderBody;
 
 /***/ }),
 
+/***/ "./src/components/blank.js":
+/*!*********************************!*\
+  !*** ./src/components/blank.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const blank = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (blank);
+
+/***/ }),
+
 /***/ "./src/components/layout.js":
 /*!**********************************!*\
   !*** ./src/components/layout.js ***!
@@ -5397,37 +5419,6 @@ const NotFoundPage = () => {
 
 /***/ }),
 
-/***/ "./src/pages/blog.js":
-/*!***************************!*\
-  !*** ./src/pages/blog.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-
-
-
-const BlogPage = ({
-  data
-}) => {
-  console.log(data);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
-    pageTitle: "My Blog Posts"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null));
-};
-
-const query = "2138962073";
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogPage);
-
-/***/ }),
-
 /***/ "./src/pages/index.js":
 /*!****************************!*\
   !*** ./src/pages/index.js ***!
@@ -5442,16 +5433,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_blank__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/blank */ "./src/components/blank.js");
+
 
  // import SEO from "../components/seo"
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
   data
 }) => {
-  console.log(data);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "This is Home Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null));
+  console.log(data.wpgraphql.posts);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, // data.wpgraphql.posts.nodes.map(node => node.title==="Home" ? (
+  data.wpgraphql.posts.nodes.map(node => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    key: node.title
+  }, "This is wordpress ", node.title, " Page.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: node.content
+    }
+  })))));
 });
-const query = "2138962073";
+const query = "154887135";
 
 /***/ }),
 

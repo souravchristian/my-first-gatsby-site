@@ -1,17 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Blank from "../components/blank"
 // import SEO from "../components/seo"
 
 
 export default ({ data }) => {
-  console.log(data);
+  console.log(data.wpgraphql.posts);
   return (
     <Layout>
-      <h4>This is Home Page</h4>
-        <div>
-          {/* <p>{node.title}</p> */}
-        </div>
+       <ul>
+      {
+        // data.wpgraphql.posts.nodes.map(node => node.title==="Home" ? (
+          data.wpgraphql.posts.nodes.map(node => (
+          <li key={node.title}>
+            This is wordpress {node.title} Page.<br/>
+            <div dangerouslySetInnerHTML={{ __html: node.content }} />
+
+            {/* {node.content} */}
+          </li>
+        )
+          )}
+      </ul>
     </Layout>
   )
 }
@@ -20,7 +30,7 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     wpgraphql {
-      posts {
+      posts(where: {title: "home"}) {
         nodes {
           slug
           title(format: RENDERED)
