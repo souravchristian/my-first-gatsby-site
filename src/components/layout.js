@@ -24,6 +24,12 @@ const Layout = ({ pageTitle, children }) => {
                   <Link to="/contact" className="nav-link">
                     Contact
                   </Link>
+                  <Link to="/carousel" className="nav-link">
+                  Carousel
+                  </Link>
+                  <Link to="/carousel" className="nav-link">
+                  Carousel
+                  </Link>
                 </Nav>
           </Navbar>
           

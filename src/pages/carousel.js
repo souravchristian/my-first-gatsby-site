@@ -2,10 +2,9 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Header from '../components/layout'
 
-const ContactPage = ({ data }) => {
-    console.log(data.wpgraphql.pages.nodes);
-  return (
-    <div>
+const CaroUsel = ({data}) => {
+    return (
+        <div>
     <Header />      
     <ul>
       {
@@ -19,13 +18,14 @@ const ContactPage = ({ data }) => {
           )}
       </ul>
     </div>
-  )
-}
+    );
+};
+
 
 export const query = graphql`
   query {
     wpgraphql {
-      pages(where: {title: "contact"}) {
+      pages(where: {title: "carousel"}) {
         nodes {
           id
           content
@@ -35,5 +35,4 @@ export const query = graphql`
     }
   }
 `
-
-export default ContactPage
+export default CaroUsel;

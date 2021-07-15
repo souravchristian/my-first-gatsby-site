@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from "gatsby"
 import Header from '../components/layout'
+import Footer from '../components/footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Blank from "../components/blank"
 
@@ -9,20 +10,17 @@ const AboutPage = ({ data }) => {
   return (
     <div>
     <Header />      
-    {/* Welcome */}
     <ul>
       {
-        // data.wpgraphql.posts.nodes.map(node => node.title==="Home" ? (
           data.wpgraphql.posts.nodes.map(node => (
           <li key={node.title}>
             This is wordpress {node.title} Page.<br/>
             <div dangerouslySetInnerHTML={{ __html: node.content }} />
-
-            {/* {node.content} */}
           </li>
         )
           )}
       </ul>
+    <Footer />
     </div>
   )
 }
