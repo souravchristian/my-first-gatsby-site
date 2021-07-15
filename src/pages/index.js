@@ -1,15 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Header from "../components/layout"
 import Blank from "../components/blank"
 // import SEO from "../components/seo"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default ({ data }) => {
   console.log(data.wpgraphql.posts);
   return (
-    <Layout>
-       <ul>
+    <div>
+    <Header />      
+    {/* Welcome */}
+    <ul>
       {
         // data.wpgraphql.posts.nodes.map(node => node.title==="Home" ? (
           data.wpgraphql.posts.nodes.map(node => (
@@ -22,7 +25,10 @@ export default ({ data }) => {
         )
           )}
       </ul>
-    </Layout>
+    </div>
+    // <Layout>
+      
+    // </Layout>
   )
 }
 

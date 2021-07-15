@@ -1,26 +1,29 @@
 import * as React from 'react'
 import { graphql } from "gatsby"
-import Layout from '../components/layout'
+import Header from '../components/layout'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Blank from "../components/blank"
 
 const AboutPage = ({ data }) => {
   console.log(data.wpgraphql.posts);
   return (
-    <Layout>
-       <ul>
-         {/* {window.location.href} */}
-         {
+    <div>
+    <Header />      
+    {/* Welcome */}
+    <ul>
+      {
         // data.wpgraphql.posts.nodes.map(node => node.title==="Home" ? (
           data.wpgraphql.posts.nodes.map(node => (
           <li key={node.title}>
             This is wordpress {node.title} Page.<br/>
-            {node.content}
+            <div dangerouslySetInnerHTML={{ __html: node.content }} />
+
+            {/* {node.content} */}
           </li>
         )
           )}
       </ul>
-    </Layout>
+    </div>
   )
 }
 
