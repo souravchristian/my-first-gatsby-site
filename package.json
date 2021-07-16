@@ -28,11 +28,13 @@
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-source-graphql": "^2.14.0",
     "gatsby-source-wordpress": "^3.11.0",
+    "gatsby-theme-contact": "^3.0.0",
     "gatsby-transformer-sharp": "^2.12.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-responsive-carousel": "^3.2.19"
+    "react-responsive-carousel": "^3.2.19",
+    "react-router-dom": "^5.2.0"
   }
 }

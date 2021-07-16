@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Header from '../components/layout'
+import Footer from '../components/footer'
 
 const ContactPage = ({ data }) => {
     console.log(data.wpgraphql.pages.nodes);
   return (
     <div>
     <Header />      
-    <ul>
       {
           data.wpgraphql.pages.nodes.map(node => (
           <li key={node.title}>
@@ -17,7 +17,7 @@ const ContactPage = ({ data }) => {
           </li>
         )
           )}
-      </ul>
+    <Footer />
     </div>
   )
 }

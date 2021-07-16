@@ -2,24 +2,20 @@ import * as React from 'react'
 import { graphql } from "gatsby"
 import Header from '../components/layout'
 import Footer from '../components/footer'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Blank from "../components/blank"
 
 const AboutPage = ({ data }) => {
-  console.log(data.wpgraphql.posts);
+  console.log(data.wpgraphql.pages);
   return (
     <div>
     <Header />      
-    <ul>
       {
-          data.wpgraphql.posts.nodes.map(node => (
+          data.wpgraphql.pages.nodes.map(node => (
           <li key={node.title}>
             This is wordpress {node.title} Page.<br/>
             <div dangerouslySetInnerHTML={{ __html: node.content }} />
           </li>
         )
           )}
-      </ul>
     <Footer />
     </div>
   )
@@ -28,9 +24,9 @@ const AboutPage = ({ data }) => {
 export const query = graphql`
   query {
     wpgraphql {
-      posts(where: {title: "about"}) {
+      pages(where: {title: "about"}) {
         nodes {
-          slug
+          id
           title(format: RENDERED)
           content(format: RENDERED)
         }

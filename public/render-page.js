@@ -111,8 +111,9 @@ return /******/ (function(modules) { // webpackBootstrap
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": (preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))),
   "component---src-pages-404-js": (preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js"))),
-  "component---src-pages-contact-js": (preferDefault(__webpack_require__(/*! ./src/pages/contact.js */ "./src/pages/contact.js"))),
-  "component---src-pages-index-js": (preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")))
+  "component---src-pages-carousel-js": (preferDefault(__webpack_require__(/*! ./src/pages/carousel.js */ "./src/pages/carousel.js"))),
+  "component---src-pages-index-js": (preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))),
+  "component---src-pages-login-js": (preferDefault(__webpack_require__(/*! ./src/pages/login.js */ "./src/pages/login.js")))
   }
 
 
@@ -49508,17 +49509,6 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./public/page-data/sq/d/3159585216.json":
-/*!***********************************************!*\
-  !*** ./public/page-data/sq/d/3159585216.json ***!
-  \***********************************************/
-/*! exports provided: data, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"data\":{\"site\":{\"siteMetadata\":{\"title\":\"Sourav\"}}}}");
-
-/***/ }),
-
 /***/ "./src/components/blank.js":
 /*!*********************************!*\
   !*** ./src/components/blank.js ***!
@@ -49579,13 +49569,10 @@ const footer = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3159585216.json */ "./public/page-data/sq/d/3159585216.json");
-var _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../public/page-data/sq/d/3159585216.json */ "./public/page-data/sq/d/3159585216.json", 1);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 
 
 
@@ -49594,25 +49581,33 @@ const Layout = ({
   pageTitle,
   children
 }) => {
-  const data = _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     bg: "dark",
     variant: "dark"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Nav"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Nav"], {
     className: "mr-auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     className: "nav-link"
-  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/about",
     className: "nav-link"
-  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/contact",
     className: "nav-link"
-  }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/carousel",
     className: "nav-link"
-  }, "Carousel")));
+  }, "Carousel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/signup",
+    className: "nav-link"
+  }, "Signup"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/login",
+    className: "nav-link"
+  }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/hook",
+    className: "nav-link"
+  }, "Hook")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -49676,10 +49671,10 @@ const NotFoundPage = () => {
 
 /***/ }),
 
-/***/ "./src/pages/contact.js":
-/*!******************************!*\
-  !*** ./src/pages/contact.js ***!
-  \******************************/
+/***/ "./src/pages/carousel.js":
+/*!*******************************!*\
+  !*** ./src/pages/carousel.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -49691,21 +49686,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ContactPage = ({
+const CaroUsel = ({
   data
 }) => {
-  console.log(data.wpgraphql.pages.nodes);
+  console.log(data);
+  var regex = /(<([^>]+)>)/ig;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", null, data.wpgraphql.pages.nodes.map(node => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", {
     key: node.title
   }, "This is wordpress ", node.title, " Page.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
     dangerouslySetInnerHTML: {
-      __html: node.content
+      __html: node.content.replace( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null), '')
     }
   })))));
 };
 
-const query = "3024491172";
-/* harmony default export */ __webpack_exports__["default"] = (ContactPage);
+const query = "3166669364";
+/* harmony default export */ __webpack_exports__["default"] = (CaroUsel);
 
 /***/ }),
 
@@ -49743,6 +49739,40 @@ __webpack_require__.r(__webpack_exports__);
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 });
 const query = "154887135";
+
+/***/ }),
+
+/***/ "./src/pages/login.js":
+/*!****************************!*\
+  !*** ./src/pages/login.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/footer */ "./src/components/footer.js");
+
+
+
+
+const login = ({
+  data
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null), data.wpgraphql.pages.nodes.map(node => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: node.title
+  }, "This is wordpress ", node.title, " Page.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: node.content
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+const query = "3546623229";
+/* harmony default export */ __webpack_exports__["default"] = (login);
 
 /***/ }),
 

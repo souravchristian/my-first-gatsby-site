@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Home from './component/Home';
-// import CarouselClass from './component/carousel';
-// import ConditionalRender from './component/ConditionalRender';
-import Login from './component/Login';
-import Registration from './component/Registration';
-import SelectDataExampleApi from './component/SelectDataExampleApi';
+// import Home from '../src/pages/about';
+// // import CarouselClass from './component/carousel';
+// // import ConditionalRender from './component/ConditionalRender';
+// import Login from '../component/Login';
+// import Registration from '../component/Registration';
+// import SelectDataExampleApi from '../component/SelectDataExampleApi';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,6 +13,8 @@ import {
   
 class App extends Component {
     render() {
+    console.log('fdddddddddddddg');
+
         return (
             <Router>
                 <Switch>

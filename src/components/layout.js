@@ -3,15 +3,6 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap'
 
 const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
   return (
           <Navbar bg="dark" variant="dark">
                 <Nav className="mr-auto">
@@ -27,8 +18,14 @@ const Layout = ({ pageTitle, children }) => {
                   <Link to="/carousel" className="nav-link">
                   Carousel
                   </Link>
-                  <Link to="/carousel" className="nav-link">
-                  Carousel
+                  <Link to="/signup" className="nav-link">
+                  Signup
+                  </Link>
+                  <Link to="/login" className="nav-link">
+                  Login
+                  </Link>
+                  <Link to="/hook" className="nav-link">
+                  Hook
                   </Link>
                 </Nav>
           </Navbar>
